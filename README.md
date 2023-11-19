@@ -11,12 +11,11 @@ import { AuthIcon } from "auth";
 ```
 Include a instance of this component in your login page as shown in the following.
 ```tsx
-export default {
-	return <main>
-		<AuthIcon/>
+export default
+    <main>
+        <AuthIcon/>
 		...
-	</main>
-}
+    </main>
 ```
 
 
