@@ -1,7 +1,7 @@
 {
     "imports": {
-        "auth": "http://localhost:7777/@uix/src/common/components/Auth/AuthIcon.tsx",
-        "auth/": "http://localhost:7777/@uix/src/common/components/Auth",
+        "auth": "https://cdn.unyt.org/uix-components-new/AuthNew/AuthIcon.tsx",
+        "auth/": "https://cdn.unyt.org/uix-components-new/AuthNew",
         "datex-core-legacy": "https://cdn.unyt.org/datex-core-js-legacy@0.0.x/datex.ts",
         "datex-core-legacy/": "https://cdn.unyt.org/datex-core-js-legacy@0.0.x/",
         "unyt_core": "https://cdn.unyt.org/datex-core-js-legacy@0.0.x/datex.ts",
