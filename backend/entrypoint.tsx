@@ -5,7 +5,7 @@
  */
 
 import { AuthIcon } from "auth";
-import { Datex, f } from "unyt_core/datex.ts";
+import { Datex, endpoint_default, expose, f, meta, namespace } from "unyt_core/datex.ts";
 import { Entrypoint } from "uix/html/entrypoints.ts";
 import { Blockchain } from "unyt_core/network/blockchain_adapter.ts";
 
@@ -25,6 +25,22 @@ const getMainEndpoint = async (endpoint: Datex.Endpoint) =>
 const isAllowed = async (endpoint: Datex.Endpoint) =>
 	await getMainEndpoint(endpoint) === f("@jonas1");
 
+/**
+ * We can expose some backend functionality
+ * and handle permission logic in there.
+ * `datex.meta.sender` will give us the
+ * requesting endpoint.
+ */
+@endpoint
+export class AuthExample {
+	@property static async secretMethod() {
+		if (await isAllowed(datex.meta.sender)) {
+			console.info("Hello from authorized endpoint...")
+			return 42;
+		}
+		throw "You are not authorized!";
+	}
+}
 
 /**
  * We can get the current requesting endpoint

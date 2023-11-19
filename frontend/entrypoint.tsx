@@ -7,7 +7,7 @@
 import { AuthIcon } from "auth";
 import { Datex } from "unyt_core/datex.ts";
 import { Entrypoint } from 'uix/html/entrypoints.ts';
-
+import { AuthExample } from "backend/entrypoint.tsx";
 const endpoint = Datex.Runtime.endpoint.main;
 export default {
 	'/frontend': async () => <main>
@@ -22,6 +22,10 @@ export default {
 			{ await endpoint.main.getCertifier() ?? '-' }
 			<br/>
 			{ await endpoint.main.getProperty("name") ?? '-' }
-		</span>	
+		</span>
+		<br/>
+		<button onclick:frontend={async ()=>alert(await AuthExample.secretMethod())}>
+			Click me!
+		</button>
 	</main>
 } satisfies Entrypoint;
