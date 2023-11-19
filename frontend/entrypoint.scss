@@ -1,0 +1,35 @@
+/**
+ * Global style definitions
+ */
+body {
+    margin: 0;
+    width: 100vw;
+    overflow-x: hidden;
+}
+main {
+    span {
+        margin: auto;
+        display: inline;
+        text-align: center;
+        margin-top: 20px;
+        max-width: calc(100% - 40px);
+        font-size: x-large;
+        word-wrap: break-word;
+        position: absolute;
+        justify-content: center;
+        left: 0;
+        right: 0;
+    }
+    .header {
+        font-size: x-large;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 10px;
+        box-sizing: border-box;
+        justify-content: space-between;
+        background-color: var(--bg-content);
+        width: 100%;
+        top: 0;
+    }
+}
