@@ -5,7 +5,7 @@
  */
 
 import { AuthIcon } from "auth";
-import { Datex, endpoint_default, expose, f, meta, namespace } from "unyt_core/datex.ts";
+import { Datex, f } from "unyt_core/datex.ts";
 import { Entrypoint } from "uix/html/entrypoints.ts";
 import { Blockchain } from "unyt_core/network/blockchain_adapter.ts";
 
