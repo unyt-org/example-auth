@@ -5,15 +5,27 @@ This repository provides a simple UIX setup, that explains how to use the [unyt 
 *[UIX Docs](https://docs.unyt.org/manual/uix/getting-started)*
 
 # Getting Started
-To include [unyt Auth](https://auth.unyt.org) functionality into your UIX project, you can include the AuthIcon component from our CDN.
+To include [unyt Auth](https://auth.unyt.org) functionality into your UIX project, you can include one of the unyt Auth components from our CDN (AuthIcon.tsx or ButtonComponent.tsx).
 ```tsx
-import { AuthIcon } from "auth";
+import { AuthIcon } from "auth/AuthIcon.tsx";
 ```
 Include a instance of this component in your login page as shown in the following.
 ```tsx
 export default
     <main>
         <AuthIcon/>
+		...
+    </main>
+```
+---
+
+The same applies to the Auth Button component:
+
+```tsx
+import { AuthButton } from "auth/AuthButton.tsx";
+export default
+    <main>
+        <AuthButton/>
 		...
     </main>
 ```
