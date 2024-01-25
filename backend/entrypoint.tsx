@@ -4,10 +4,11 @@
  * when a page is visited
  */
 
-import { AuthIcon } from "auth";
 import { Datex, f } from "unyt_core/datex.ts";
 import { Entrypoint } from "uix/html/entrypoints.ts";
 import { Blockchain } from "unyt_core/network/blockchain_adapter.ts";
+import { MyHeader } from "../common/MyHeader.tsx";
+import { AuthButton } from "common/AuthOld/AuthButton.tsx";
 
 /**
  * Since the main endpoint has created a signed
@@ -52,17 +53,38 @@ export class AuthExample {
  *   ctx.endpoint.main.getProperty("name") -> John Snow
  */
 export default {
+
+	/**
+	 * Displays a simple header including the
+	 * AuthIcon component. Change alignment
+	 * option to see the responsiveness in 
+	 * action.
+	 */
 	'/': async (ctx) => {
 		const alias = await ctx.endpoint.main.getAlias();
 		return <main>
-			<div class="header">
-				Auth App <AuthIcon/>
-			</div>
+			<MyHeader align="left"/>
 			{
 				await isAllowed(ctx.endpoint) ? 
 					<span>Pssst <a>{alias}</a>, the secret is 42!</span> : 
-					undefined
+					<span>Sorry, you need to login.</span>
 			}
+		</main>
+	},
+	
+	/**
+	 * Displays the auth button component
+	 * on the /button route. You can modify
+	 * appearance and shape via options.
+	 */
+	'/button': async (ctx) => {
+		const alias = await ctx.endpoint.main.getAlias();
+		return <main>
+			<span>
+				Hello {alias ?? "world"},<br/>
+				this is an exemplary page.<br/>
+			</span>
+			<AuthButton appearance={"auto"} shape={"rect"}/>
 		</main>
 	}
 } satisfies Entrypoint;
