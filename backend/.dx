@@ -1,0 +1,9 @@
+use stage from #public.uix;
+
+endpoint: stage {
+	prod: @+auth-example
+},
+
+location: stage {
+	prod: @+app-host-eu2
+}
