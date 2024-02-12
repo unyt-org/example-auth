@@ -80,14 +80,12 @@ export default {
 	 */
 	'/button': async (ctx) => {
 		const alias = await ctx.endpoint.main.getAlias();
-		return renderBackend(
-			<main>
-				<span>
-					Hello {alias ?? "world"},<br/>
-					this is an exemplary page.<br/>
-				</span>
-				<AuthButton appearance={"auto"} shape={"rect"}/>
-			</main>
-		);
+		return <main>
+			<span>
+				Hello {alias ?? "world"},<br/>
+				this is an exemplary page.<br/>
+			</span>
+			<AuthButton appearance={"auto"} shape={"rect"}/>
+		</main>
 	}
 } satisfies Entrypoint;
