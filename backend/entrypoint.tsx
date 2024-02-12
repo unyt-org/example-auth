@@ -71,21 +71,5 @@ export default {
 					<span>Sorry, you need to login.</span>
 			}
 		</main>);
-	},
-	
-	/**
-	 * Displays the auth button component
-	 * on the /button route. You can modify
-	 * appearance and shape via options.
-	 */
-	'/button': async (ctx) => {
-		const alias = await ctx.endpoint.main.getAlias();
-		return <main>
-			<span>
-				Hello {alias ?? "world"},<br/>
-				this is an exemplary page.<br/>
-			</span>
-			<AuthButton appearance={"auto"} shape={"rect"}/>
-		</main>
 	}
 } satisfies Entrypoint;
