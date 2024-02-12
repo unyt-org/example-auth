@@ -8,6 +8,9 @@ import { Entrypoint } from 'uix/html/entrypoints.ts';
 import { AuthExample } from "backend/entrypoint.tsx";
 import { MyHeader } from "../common/MyHeader.tsx";
 const endpoint = Datex.Runtime.endpoint.main;
+
+Datex.Supranet.connect();
+
 export default {
 	'/frontend': async () => <main>
 		<MyHeader align={"right"}/>
