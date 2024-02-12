@@ -1,5 +1,6 @@
 import { Component } from "uix/components/Component.ts";
 import { AuthIcon } from "auth/AuthIcon.tsx";
+import { Datex } from "unyt_core/datex.ts";
 
 @template(function(this: MyHeader) {
 	return <div data-align={this.options.align ?? "left"}>
@@ -13,6 +14,8 @@ import { AuthIcon } from "auth/AuthIcon.tsx";
 		<AuthIcon/>
 	</div>
 })
-export class MyHeader extends Component<{align?: "left" | "right"}> {
-
+export class MyHeader extends Component<{align?: "left" | "right"}> {
+	protected onDisplay(): void | Promise<void> {
+		Datex.Supranet.connect();
+	}
 }
