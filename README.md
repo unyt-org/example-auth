@@ -52,3 +52,6 @@ The directory names (`backend`, `frontend`, `common`) are important to tell UIX 
 The `app.dx` configuration file is required for a UIX app to run. It needs to contain at least the app name.
 The `app.dx` has to be placed next to the app directories (`frontend`, `backend` and `common`) in the default configuration.
 
+---
+
+<sub>&copy; unyt 2024 • [unyt.org](https://unyt.org)</sub>

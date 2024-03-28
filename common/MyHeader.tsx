@@ -15,7 +15,7 @@ import { Datex } from "unyt_core/datex.ts";
 	</div>
 })
 export class MyHeader extends Component<{align?: "left" | "right"}> {
-	@frontend
+	@standalone
 	protected async onDisplay() {
 		const { Datex } = await import("unyt_core");
 		Datex.Supranet.connect();

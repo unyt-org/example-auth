@@ -8,7 +8,6 @@ import { Datex, f } from "unyt_core/datex.ts";
 import { Entrypoint } from "uix/html/entrypoints.ts";
 import { Blockchain } from "unyt_core/network/blockchain_adapter.ts";
 import { MyHeader } from "../common/MyHeader.tsx";
-import { AuthButton } from "auth/AuthButton.tsx";
 import { renderBackend } from "uix/base/render-methods.ts";
 
 /**
