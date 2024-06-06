@@ -5,5 +5,5 @@ endpoint: stage {
 },
 
 location: stage {
-	prod: @+app-host-eu2
+	prod: @+unyt-host-1
 }

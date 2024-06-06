@@ -6,6 +6,7 @@ This repository provides a simple UIX setup, that explains how to use the [unyt 
 
 # Getting Started
 To include [unyt Auth](https://auth.unyt.org) functionality into your UIX project, you can include one of the unyt Auth components from our CDN (AuthIcon.tsx or ButtonComponent.tsx).
+
 ```tsx
 import { AuthIcon } from "auth/AuthIcon.tsx";
 ```

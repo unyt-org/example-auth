@@ -3,11 +3,12 @@
  * This module provides a default export that defines the UI that is created on the frontend
  * when a page is visited
  */
-import { Datex } from "unyt_core/datex.ts";
+import { Datex } from "datex-core-legacy/datex.ts";
 import { Entrypoint } from 'uix/html/entrypoints.ts';
 import { AuthExample } from "backend/entrypoint.tsx";
 import { MyHeader } from "../common/MyHeader.tsx";
 import { AuthButton } from "auth/AuthButton.tsx";
+
 const endpoint = Datex.Runtime.endpoint.main;
 await Datex.Supranet.connect();
 

@@ -4,9 +4,9 @@
  * when a page is visited
  */
 
-import { Datex, f } from "unyt_core/datex.ts";
+import { Datex, f } from "datex-core-legacy/datex.ts";
 import { Entrypoint } from "uix/html/entrypoints.ts";
-import { Blockchain } from "unyt_core/network/blockchain_adapter.ts";
+import { Blockchain } from "datex-core-legacy/network/blockchain_adapter.ts";
 import { MyHeader } from "../common/MyHeader.tsx";
 import { renderBackend } from "uix/base/render-methods.ts";
 

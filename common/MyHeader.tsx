@@ -1,6 +1,5 @@
 import { Component } from "uix/components/Component.ts";
 import { AuthIcon } from "auth/AuthIcon.tsx";
-import { Datex } from "unyt_core/datex.ts";
 
 @template(function(this: MyHeader) {
 	return <div data-align={this.options.align ?? "left"}>
