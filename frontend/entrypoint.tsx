@@ -6,7 +6,7 @@
 import { Datex } from "datex-core-legacy/datex.ts";
 import { Entrypoint } from 'uix/html/entrypoints.ts';
 import { AuthExample } from "backend/entrypoint.tsx";
-import { MyHeader } from "../common/MyHeader.tsx";
+import { MyHeader } from "common/MyHeader.tsx";
 import { AuthButton } from "auth/AuthButton.tsx";
 
 const endpoint = Datex.Runtime.endpoint.main;
